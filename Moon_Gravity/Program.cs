@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 
 namespace MyProject
 {
@@ -13,7 +12,8 @@ namespace MyProject
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("{0:0.000}", Program.CaluclateMoonWeight(Convert.ToSingle(Console.ReadLine())));
+            var input = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("{0:0.000}", Program.CaluclateMoonWeight(input));
         }
     }
 }
