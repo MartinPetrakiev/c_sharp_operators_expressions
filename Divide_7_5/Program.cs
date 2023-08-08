@@ -7,17 +7,17 @@ namespace MyProject
     {
         public static bool checkDevision(int n)
         {
-            if (n % 7 == 0) {
+            if (n % 7 == 0 || n % 5 == 0) 
+            {
                 return true;
             }
-            if (n % 5 == 0) {
-                return true;
-            }
+
             return false;
         }
         static void Main(string[] args)
         {
-            int num = int.Parse(Console.ReadLine());
+            var input = Console.ReadLine();
+            int num = int.Parse(input);
             Console.WriteLine(Program.checkDevision(num) + " NUMBER");
         }
     }
