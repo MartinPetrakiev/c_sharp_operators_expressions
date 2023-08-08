@@ -20,5 +20,6 @@ namespace MyProject
             int num = int.Parse(input);
             Console.WriteLine(Program.checkDevision(num) + " NUMBER");
         }
+        
     }
 }

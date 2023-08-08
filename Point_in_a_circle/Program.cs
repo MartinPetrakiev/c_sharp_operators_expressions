@@ -27,6 +27,7 @@ namespace MyProject
             else 
             {
                 Console.WriteLine("no " + distance.ToString("0.00"));
+                
             }
         }
     }

@@ -15,5 +15,6 @@ namespace MyProject
 
             Console.WriteLine(bitNumToString[2]);
         }
+        
     }
 }

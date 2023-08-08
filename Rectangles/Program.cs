@@ -25,7 +25,6 @@ namespace MyProject
             Console.Write("{0:0.00}", area);
             Console.Write(" ");
             Console.Write("{0:0.00}", perimeter);
-
         }
     }
 }

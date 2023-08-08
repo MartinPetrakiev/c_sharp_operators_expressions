@@ -29,6 +29,7 @@ namespace MyProject
             int num = int.Parse(input);
 
             Console.WriteLine(IsPrime(num));
+            
         }
     }
 }

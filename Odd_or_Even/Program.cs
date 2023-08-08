@@ -23,7 +23,8 @@ namespace MyProject
             }
             else 
             {
-                Console.WriteLine("Odd");
+                Console.WriteLine("Odd"); 
+                
             }
         }
     }
