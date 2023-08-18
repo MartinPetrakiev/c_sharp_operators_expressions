@@ -4,32 +4,34 @@ namespace MyProject
 {
     class Program
     {
-        public static bool IsPrime(int n)
+        public static bool IsPrime(int number)
         {
-            int countDevisions = 0;
+            bool IsPrime = true;
 
-            for (int i = 1; i <= n; i++)
+            if (number == 1)
             {
-                if (n % i == 0)
+                IsPrime = false;
+            }
+
+            var boundary = Math.Floor(Math.Sqrt(number));
+
+            for (int i = 2; i <= boundary; i += 2)
+            {
+                if (number % i == 0)
                 {
-                    countDevisions++;
+                    IsPrime = false;
+                    break;
                 }
             }
 
-            if (countDevisions == 2)
-            {
-                return true;
-            }
-
-            return false;
+            return IsPrime;
         }
+
         static void Main(string[] args)
         {
-            var input = Console.ReadLine();
-            int num = int.Parse(input);
+            int N = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine(IsPrime(num));
-            
+            Console.WriteLine(IsPrime(N));
         }
     }
 }
