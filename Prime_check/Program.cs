@@ -8,19 +8,29 @@ namespace MyProject
         {
             bool IsPrime = true;
 
-            if (number == 1)
+            if (number <= 1)
             {
                 IsPrime = false;
             }
-
-            var boundary = Math.Floor(Math.Sqrt(number));
-
-            for (int i = 2; i <= boundary; i += 2)
+            else if (number == 2 || number == 3 || number == 5)
             {
-                if (number % i == 0)
+                IsPrime = true;
+            }
+            else if (number % 2 == 0 || number % 3 == 0 || number % 5 == 0)
+            {
+                IsPrime = false;
+            }
+            else
+            {
+                int boundary = (int)Math.Floor(Math.Sqrt(number));
+
+                for (int i = 7; i <= boundary; i += 6)
                 {
-                    IsPrime = false;
-                    break;
+                    if (number % i == 0 || number % (i + 2) == 0)
+                    {
+                        IsPrime = false;
+                        break;
+                    }
                 }
             }
 
