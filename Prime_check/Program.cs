@@ -6,30 +6,31 @@ namespace MyProject
     {
         public static bool IsPrime(int number)
         {
-            bool IsPrime = true;
+            bool IsPrime = false;
 
-            if (number <= 1)
-            {
-                IsPrime = false;
-            }
-            else if (number == 2 || number == 3 || number == 5)
+            if (number == 2 || number == 3 || number == 5)
             {
                 IsPrime = true;
             }
-            else if (number % 2 == 0 || number % 3 == 0 || number % 5 == 0)
-            {
-                IsPrime = false;
-            }
             else
             {
-                int boundary = (int)Math.Floor(Math.Sqrt(number));
+                double n = Math.Round((double)number / 6);
 
-                for (int i = 7; i <= boundary; i += 6)
+                if (n < (double)number / 6)
                 {
-                    if (number % i == 0 || number % (i + 2) == 0)
+                    n = 6 * n + 1;
+
+                    if (n == number)
                     {
-                        IsPrime = false;
-                        break;
+                        IsPrime = true;
+                    }
+                }
+                else
+                {
+                    n = 6 * n - 1;
+                    if (n == number)
+                    {
+                        IsPrime = true;
                     }
                 }
             }
