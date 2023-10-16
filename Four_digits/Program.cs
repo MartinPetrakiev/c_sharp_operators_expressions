@@ -34,5 +34,6 @@ namespace MyProject
             Console.WriteLine(LastToFirst(input));
             Console.WriteLine(SecondToThird(input));
         }
+        
     }
 }

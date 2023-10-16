@@ -19,5 +19,6 @@ namespace MyProject
  
             Console.WriteLine(TrapezoidArea(a, b, h).ToString("n7"));  
         }
+        
     }
 }

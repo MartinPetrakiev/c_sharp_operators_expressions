@@ -22,7 +22,7 @@ namespace MyProject
 
             return false;
         }
-
+        
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
@@ -39,6 +39,7 @@ namespace MyProject
             {
                 Console.WriteLine(false + " 0");
             }
+            
         }
     }
 }
